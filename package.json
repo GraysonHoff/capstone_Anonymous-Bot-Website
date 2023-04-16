@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/GraysonHoff/capstone_Anonymous-Bot-Website/issues"
   },
-  "homepage": "https://github.com/GraysonHoff/capstone_Anonymous-Bot-Website#readme"
+  "homepage": "https://github.com/GraysonHoff/capstone_Anonymous-Bot-Website#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
