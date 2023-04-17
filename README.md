@@ -15,5 +15,4 @@
 #### To have this bot, you will have to be in ownership of a discord server. This means being able to modify the contents of the server. After this is done, a user can go to our website (link will be below) and it will be able to redirect you to the installation page. This will have you login to your Discord Account. After this is finished, you will be able to select the correct server for the bot to be placed into. After that is finished, you can interact with the bot using the commands on the original website that the user visited.  ####
 
 ## LINK TO THE SITE ##
-#### Website is still under construction... ####
-#### Link will be added when the site is available. ####
+#### [AnonymousBot](https://anonymouse-bot-website.onrender.com/) ####
