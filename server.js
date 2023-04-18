@@ -11,7 +11,14 @@ express()
   .set("views", path.join(__dirname, "views"))
   .set("view engine", "ejs")
   .get("/", async(req, res) => {
-    res.render('index')
+
+    try {
+      res.render('index')
+    } catch (error) {
+      res.status(400)
+    }
+
+
   })
   
   .listen(PORT, () => console.log(`Listening on ${PORT}`));
