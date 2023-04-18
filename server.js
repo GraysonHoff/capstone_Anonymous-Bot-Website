@@ -11,8 +11,7 @@ express()
   .set("views", path.join(__dirname, "views"))
   .set("view engine", "ejs")
   .get("/", async(req, res) => {
-
-    res.send("Hello Anonymous Bot!");
+    res.render('index.html')
   })
   
   .listen(PORT, () => console.log(`Listening on ${PORT}`));
