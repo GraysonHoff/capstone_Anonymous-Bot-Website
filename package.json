@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/GraysonHoff/capstone_Anonymous-Bot-Website#readme",
   "dependencies": {
+    "ejs": "^3.1.9",
     "express": "^4.18.2"
   }
 }
