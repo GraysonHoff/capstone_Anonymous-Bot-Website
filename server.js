@@ -17,15 +17,15 @@ express()
     res.render('pages/information')
   })
   .get("/instructions", async(req, res) => {
-    res.render('pages/information')
+    res.render('pages/instructions')
   })
   .get("/download", async(req, res) => {
-    res.render('pages/information')
+    res.render('pages/download')
   })
   .get("/suggest", async(req, res) => {
-    res.render('pages/information')
+    res.render('pages/suggest')
   })
   .get("/more", async(req, res) => {
-    res.render('pages/information')
+    res.render('pages/more')
   })
   .listen(PORT, () => console.log(`Listening on ${PORT}`));
