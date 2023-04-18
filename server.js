@@ -14,7 +14,7 @@ express()
     const args = {
       time: Date.now()
     };
-    res.render('index', args)
+    res.render('pages/index', args)
   })
   
   .listen(PORT, () => console.log(`Listening on ${PORT}`));
