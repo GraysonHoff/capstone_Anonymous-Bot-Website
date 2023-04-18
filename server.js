@@ -11,7 +11,9 @@ express()
   .set("views", path.join(__dirname, "views"))
   .set("view engine", "ejs")
   .get("/", async(req, res) => {
-    const args = "hello there"
+    const args = {
+      time: Date.now()
+    };
     res.render('index', args)
   })
   
