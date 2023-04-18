@@ -16,5 +16,16 @@ express()
   .get("/information", async(req, res) => {
     res.render('pages/information')
   })
-  
+  .get("/instructions", async(req, res) => {
+    res.render('pages/information')
+  })
+  .get("/download", async(req, res) => {
+    res.render('pages/information')
+  })
+  .get("/suggest", async(req, res) => {
+    res.render('pages/information')
+  })
+  .get("/more", async(req, res) => {
+    res.render('pages/information')
+  })
   .listen(PORT, () => console.log(`Listening on ${PORT}`));
