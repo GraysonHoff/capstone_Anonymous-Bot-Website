@@ -11,10 +11,10 @@ express()
   .set("views", path.join(__dirname, "views"))
   .set("view engine", "ejs")
   .get("/", async(req, res) => {
-    const args = {
-      time: Date.now()
-    };
-    res.render('pages/index', args)
+    res.render('pages/index')
+  })
+  .get("/information", async(req, res) => {
+    res.render('pages/information')
   })
   
   .listen(PORT, () => console.log(`Listening on ${PORT}`));
