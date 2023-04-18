@@ -11,7 +11,7 @@ express()
   .set("views", path.join(__dirname, "views"))
   .set("view engine", "ejs")
   .get("/", async(req, res) => {
-    res.render('index.html')
+    res.render('index')
   })
   
   .listen(PORT, () => console.log(`Listening on ${PORT}`));
