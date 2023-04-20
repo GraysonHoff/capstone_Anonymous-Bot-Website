@@ -8,10 +8,14 @@ express()
   .use(express.static(path.join(__dirname, "public")))
   .use(express.json())
   .use(express.urlencoded({ extended: true }))
+  .use('/images', express.static("images"))
+  .use('/css', express.static("css"))
   .set("views", path.join(__dirname, "views"))
   .set("view engine", "ejs")
   .get("/", async(req, res) => {
-    res.render('pages/index')
+    var pic = "/images/mask.png";
+    var css = "/css/css.css";
+    res.render('pages/index', {pic: pic, css: css})
   })
   .get("/information", async(req, res) => {
     res.render('pages/information')

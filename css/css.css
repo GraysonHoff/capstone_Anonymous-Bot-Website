@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.columnOne {
+    float: left;
+    width: 33.33%;
+    text-align: center;
+}
+
+.columnOne a {
+    text-decoration: none;
+}
+
+.columnTwo {
+    float: left;
+    width: 33.33%;
+    text-align: center;
+}
+.columnThree {
+    float: left;
+    width: 33.33%;
+    text-align: center;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#maskImage {
+    width: 20%;
+}
+  
