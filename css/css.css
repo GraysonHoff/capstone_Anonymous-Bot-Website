@@ -1,15 +1,37 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
+    background-color: #ddd;
 }
 
 .columnOne {
     float: left;
     width: 33.33%;
     text-align: center;
+    margin: 0 auto;
+}
+
+.navigation {
+    padding-top: 7rem;
+    width: 40%;
+    margin: 0 auto;
+}
+
+.columnOne li {
+    padding: 15px;
+    border: 2px solid black;
+    list-style-type: none;
+    margin-top: 20px;
 }
 
 .columnOne a {
     text-decoration: none;
+    color: #000;
+    letter-spacing: 3px;
+}
+
+.columnOne a:visited {
+    text-decoration: none;
+    color: #000;
 }
 
 .columnTwo {
@@ -17,9 +39,45 @@ body {
     width: 33.33%;
     text-align: center;
 }
+
+.columnTwo h1 {
+    font-size: 2.5em;
+    font-weight: lighter;
+    color: #dfdfdf;
+    letter-spacing: 7px;
+    text-shadow: 0 2px 2px #000, 
+        -2px 5px 1px #171717, 
+        -4px 8px 0px #343434, 
+        -6px 11px 0px #565656,
+        -8px 14px 0px #747474,
+        -10px 17px 0px #979797,
+        -12px 20px 0px #b8b8b8,
+        -14px 23px 0px #dfdfdf;
+}
+
+.columnTwo h3 {
+    letter-spacing: 3px;
+    color: #000;
+    text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
+    0px -4px 10px rgba(255,255,255,0.3);
+}
+
+
 .columnThree {
     float: left;
     width: 33.33%;
+}
+
+.columnThree p {
+    border: 2px solid black;
+    word-spacing: 5px;
+    padding: 30px;
+}
+
+.paragraph {
+    padding-top: 7rem;
+    width: 40%;
+    margin: 0 auto;
     text-align: center;
 }
 
@@ -30,6 +88,7 @@ body {
 }
 
 #maskImage {
-    width: 20%;
+    /* margin-top: 1rem; */
+    width: 70%;
 }
   
