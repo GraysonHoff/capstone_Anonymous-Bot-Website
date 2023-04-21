@@ -3,6 +3,10 @@ body {
     background-color: #ddd;
 }
 
+.row {
+    margin-top: 7rem;
+}
+
 .columnOne {
     float: left;
     width: 33.33%;
@@ -11,7 +15,7 @@ body {
 }
 
 .navigation {
-    padding-top: 3rem;
+    padding-top: 2rem;
     width: 40%;
     margin: 0 auto;
     margin-right: 7rem;
@@ -19,7 +23,7 @@ body {
 
 .columnOne li {
     padding: 15px;
-    border: 2px solid black;
+    border: 3px solid black;
     list-style-type: none;
     margin-top: 2.5rem;
 
@@ -44,6 +48,7 @@ body {
 }
 
 .columnTwo h1 {
+    margin-top: -3rem;
     font-size: 2.5em;
     font-weight: lighter;
     color: #dfdfdf;
@@ -61,6 +66,7 @@ body {
 .columnTwo h3 {
     letter-spacing: 3px;
     color: #000;
+    margin-top: 1rem;
     text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
     0px -4px 10px rgba(255,255,255,0.3);
 }
@@ -72,13 +78,13 @@ body {
 }
 
 .columnThree p {
-    border: 2px solid black;
+    border: 3px solid black;
     word-spacing: 5px;
     padding: 30px;
 }
 
 .paragraph {
-    padding-top: 7rem;
+    padding-top: 6rem;
     width: 40%;
     margin: 0 auto;
     text-align: center;
@@ -93,6 +99,6 @@ body {
 
 #maskImage {
     width: 70%;
-    margin-top: -2rem;
+    margin-top: 2rem;
 }
   
