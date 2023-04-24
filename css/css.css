@@ -91,6 +91,14 @@ body {
     margin-left: 7rem;
 }
 
+/* .infoParagraph {
+    padding-top: 6rem;
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+    margin-left: 6rem;
+} */
+
 .row:after {
     content: "";
     display: table;
