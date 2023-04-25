@@ -22,7 +22,8 @@ express()
     res.render('pages/information', {css: css})
   })
   .get("/instructions", async(req, res) => {
-    res.render('pages/instructions')
+    var css = "/css/css.css";
+    res.render('pages/instructions', {css: css})
   })
   .get("/download", async(req, res) => {
     res.render('pages/download')

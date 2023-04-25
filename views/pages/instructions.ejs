@@ -4,29 +4,48 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="<%= css %>">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Anonymous Bot - Instructions</title>
 </head>
   <body>
 
-    <div class="title">
-      <h1>Anonymous Bot</h1>
-      <h3>Instructions Page</h3>
-    </div>
+    <div class="desktop">
+      <div class="row">
 
-    <div class="navigation">
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/information">Information</a></li>
-          <li><a href="/instructions">Instructions</a></li>
-          <li><a href="/download">Download</a></li>
-          <li><a href="/suggest">Suggest</a></li>
-          <li><a href="/more">More</a></li>
-        </ul>
+        <div class="columnOne">
+          <div class="desktopNav">
+            <h3 class="navTitle">NAVIGATION</h3>
+            <a class="home" href="/"><li>HOME</li></a>
+            <a class="information" href="/information"><li>INFORMATION</li></a>
+            <a class="instructions" href="/instructions"><li>INSTRUCTIONS</li></a>
+            <a class="download" href="/download"><li>DOWNLOAD</li></a>
+            <a class="suggest" href="/suggest"><li>SUGGEST</li></a>
+            <a class="more" href="/more"><li>MORE</li></a>
+          </div>
+        </div>
+
+        <div class="columnTwo"> 
+          <h1>ANONYMOUS BOT</h1>
+          <h3>INSTRUCTIONS PAGE</h3>
+        </div>
+  
+
+        <div class="entireContent">
+          <h2 id="headerForList">LIST OF COMMANDS</h2><br>
+          <div id="listOfCommands">
+            <ul>
+              <li>/help - Display link to the list of commands.</li>
+              <li>/clear - Deletes a specified amount of messages from the current channel.</li>
+              <li>/giverole - Gives a user a specified role.</li>
+              <li>/removerole - Removes a specified role from a user.</li>
+              <li>/join - Have Anonymous Bot join a voice channel.</li>
+              <li>/disconnect - Have Anonymous Bot disconnect from the voice channel.</li>
+            </ul>
+          </div>
+        </div>
       </div>
-
-    <div class="mainBody">
-
-    </div>
+    </div> <!-- end of desktop nav -->
     
   </body>
 </html>
