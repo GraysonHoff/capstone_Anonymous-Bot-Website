@@ -7,11 +7,6 @@ body {
     margin-top: 7rem;
 }
 
-.mobile {
-    display: none;
-}
-
-
 .columnOne {
     float: left;
     width: 33.33%;
@@ -21,9 +16,31 @@ body {
 
 .desktopNav {
     padding-top: 2rem;
-    width: 40%;
+    width: 70%;
     margin: 0 auto;
-    margin-right: 7rem;
+    /* margin-right: 7rem; */
+    text-align: center;
+}
+
+.navTitle {
+    letter-spacing: 3px;
+    color: #000;
+    margin-top: 1rem;
+    text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
+    0px -4px 10px rgba(255,255,255,0.3);
+    margin-bottom: -1.5rem;
+}
+
+#paragraphTitle {
+    letter-spacing: 3px;
+    color: #000;
+    margin-top: 1rem;
+    text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
+    0px -4px 10px rgba(255,255,255,0.3);
+}
+
+.mobile {
+    display: none;
 }
 
 .columnOne li {
@@ -31,7 +48,6 @@ body {
     border: 3px solid black;
     list-style-type: none;
     margin-top: 2.5rem;
-
 }
 
 .columnOne a {
@@ -76,6 +92,19 @@ body {
     0px -4px 10px rgba(255,255,255,0.3);
 }
 
+.columnTwo p {
+    border: 3px solid black;
+    word-spacing: 5px;
+    padding: 30px;
+}
+
+.paragraphOne {
+    padding-top: 1rem;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    margin-left: 1rem;
+}
 
 .columnThree {
     float: left;
@@ -88,12 +117,12 @@ body {
     padding: 30px;
 }
 
-.paragraph {
-    padding-top: 6rem;
-    width: 40%;
+.paragraphTwo {
+    padding-top: 2rem;
+    width: 70%;
     margin: 0 auto;
     text-align: center;
-    margin-left: 7rem;
+    margin-left: 5rem;
 }
 
 .row:after {
@@ -102,12 +131,7 @@ body {
     clear: both;
 }
 
-#maskImage {
-    width: 70%;
-    margin-top: 2rem;
-}
-  
-@media only screen and (min-width: 300px) and (max-width: 550px) {
+@media only screen and (min-width: 300px) and (max-width: 1080px) {
     .desktop {
         display: none;
     }
@@ -124,14 +148,7 @@ body {
     .topnav #myLinks {
         display: none;
     }
-    .image {
-        text-align: center;
-    }
 
-    #maskImage {
-        width: 90%;
-        margin-top: -1rem;
-    }
 
     .topnav a {
         color: black;
@@ -182,115 +199,19 @@ body {
         border: 2px solid black;
     }
 
-    .paragraph {
-        padding: 20px;
-        width: 80%;
-        margin: 0 auto;
-        text-align: center;
-        /* margin-left: 7rem; */
+    .paragraphOne, .paragraphTwo {
+        all: revert;
         border: 2px solid black;
+        padding: 15px;
+        margin: 1rem;
+        text-align: center;
     }
 
  }
 
-@media only screen and (min-width: 551px) and (max-width: 1080px) {
-
-    .desktop {
-        display: none;
-    }
-
-    .mobile {
-        display: unset;
-    }
-
-    .topnav {
-        overflow: hidden;
-        position: relative;
-        text-align: center;
-    }
-
-    .topnav #myLinks {
-        display: none;
-    }
-    .image {
-        text-align: center;
-    }
-
-    #maskImage {
-        width: 50%;
-        margin-top: -1rem;
-    }
-
-    .topnav a {
-        color: black;
-        padding: 14px 16px;
-        text-decoration: none;
-        margin-left: 5px;
-        display: block;
-    }
-
-    .topnav a.icon {
-    background: white;
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 0;
-    }
-
-    .myLinks a {
-    border: 1px solid black;
-    }
-
-    .active {
-    padding: 5px 16px;
-    margin-right: 20px;
-    color: black;
-    font-size: 40px;
-    font-weight: lighter;
-    color: #dfdfdf;
-    letter-spacing: 7px;
-    text-shadow: 0 2px 2px #000, 
-        -2px 5px 1px #171717, 
-        -4px 8px 0px #343434, 
-        -6px 11px 0px #565656,
-        -8px 14px 0px #747474,
-        -10px 17px 0px #979797,
-        -12px 20px 0px #b8b8b8,
-        -14px 23px 0px #dfdfdf;
-    }  
-
-    .topnav h3 {
-        letter-spacing: 2px;
-        color: #000;
-        margin: 1rem;
-        padding: 10px;
-        text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
-        0px -4px 10px rgba(255,255,255,0.3);
-        text-align: center;
-        border: 2px solid black;
-    }
-
-    .paragraph {
-        padding: 20px;
-        width: 80%;
-        margin: 0 auto;
-        text-align: center;
-        /* margin-left: 7rem; */
-        border: 2px solid black;
-    }
-
-}
-
 @media only screen and (min-width: 1081px) and (max-width: 1440px) {
 
-    .desktopNav {
-        padding-top: 2rem;
-        width: 60%;
-        margin: 0 auto;
-        margin-right: 0 auto;
-    }
-
-    .paragraph {
+    .paragraphTwo {
         margin: 0;
         width: 80%;
         text-align: center;
@@ -309,7 +230,7 @@ body {
         text-align: center;
     }
 
-    .paragraph {
+    .paragraphTwo {
         margin: 0;
         width: 80%;
         text-align: center;
@@ -328,7 +249,7 @@ body {
         text-align: center;
     }
 
-    .paragraph {
+    .paragraphTwo {
         margin: 0;
         width: 60%;
         text-align: center;
@@ -372,12 +293,19 @@ body {
         text-align: center;
     }
 
-    .paragraph {
+    .paragraphOne p {
         font-size: 2rem;
+    }
+
+    .paragraphTwo {
         margin: 0;
         width: 60%;
         text-align: center;
         margin-left: 3rem;
+    }
+
+    .paragraphTwo p {
+        font-size: 2rem;
     }
 
     .columnOne li {

@@ -18,7 +18,8 @@ express()
     res.render('pages/index', {pic: pic, css: css})
   })
   .get("/information", async(req, res) => {
-    res.render('pages/information')
+    var css = "/css/infoCss.css";
+    res.render('pages/information', {css: css})
   })
   .get("/instructions", async(req, res) => {
     res.render('pages/instructions')

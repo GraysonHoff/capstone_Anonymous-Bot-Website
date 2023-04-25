@@ -5,41 +5,141 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Anonymous Bot - Information</title>
-  <link rel="stylesheet" href="/css/css.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="<%= css %>">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
   <body>
 
-    <div class="row">
-
-
-      <div class="columnOne">
-        <div class="navigation">
-          <a class="home" href="/"><li>HOME</li></a>
-          <a class="information" href="/information"><li>INFORMATION</li></a>
-          <a class="instructions" href="/instructions"><li>INSTRUCTIONS</li></a>
-          <a class="download" href="/download"><li>DOWNLOAD</li></a>
-          <a class="suggest" href="/suggest"><li>SUGGEST</li></a>
-          <a class="more" href="/more"><li>MORE</li></a>
-        </div>
-      </div>
-
-      <div class="columnTwo"> 
-        <h1>ANONYMOUS BOT</h1>
+    <div class="mobile">
+      <div class="topnav">
+        <h1 class="active">Anonymous Bot</h1>
         <h3>INFORMATION PAGE</h3>
-        <img id="maskImage" src="/images/mask.png" alt="maskImage">
-      </div>
-
-
-
-      <div class="columnThree">
-        <div class="paragraph">
-          <p>THIS PROJECT IS MADE BY RILEY WELD, BRENT STICKNEY, LIEFE SUTLIFF, AND GRAYSON HOFF. THE PROJECT IS A DISCORD BOT THAT HAS A LIST OF COMMANDS AND YOU WILL BE ABLE TO CHAT WITH IT. IF YOU GO TO THE INSTRUCTIONS PAGE, YOU CAN GET A LIST OF ALL THE COMMANDS AND WHAT THEY DO. IF YOU WANT TO TRY THE BOT FOR YOURSELF, YOU CAN GO TO THE DOWNLOAD PAGE AND PROCEED TO DOWNLOAD.
-          </p>
+        <div id="myLinks">
+          <a href="/">HOME</a>
+          <a href="information">INFORMATION</a>
+          <a href="instructions">INSTRUCTIONS</a>
+          <a href="download">DOWNLOAD</a>
+          <a href="suggest">SUGGEST</a>
+          <a href="more">MORE</a>
         </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
       </div>
 
 
-    </div>
+
+      <div class="paragraphOne">
+
+        <h2>BOT INFORMATION</h2>
+        <p>THE ANONYMOUS DISCORD BOT IS ONE OF THE LEADING DISCORD BOTS ON THE MARKET. 
+          THE END PRODUCT OF THE BOT WILL BE ABLE TO PROVIDE A PLETHORA AMOUND OF FEATURES 
+          TO THE USER. MOST DISCORD BOTS SPECIALIZE IN ONE ASPECT. THAT MIGHT BE PLAYING MUSIC 
+          OR A DIFFERENT TYPE OF FEATURE. FOR OUR BOT, WE PLAN ON HAVING MANY DIFFERENT FEATURES THAT 
+          THE USER CAN HAVE ACCESS TO. THIS IS GOING TO FIT THE CUSTOMER NEEDS OF A DISCORD BOT BECAUSE 
+          IT'S GOING TO DO MORE THAN JUST A NORMAL DISCORD BOT. WITH THE COMPANION SITE THAT WILL BE 
+          MADE FOR THE USER, THEY WILL HAVE ACCESS TO INFORMATION AND INSTRUCTIONS ON THE BOT. 
+          WE CHOSE THIS NAME FOR THE BOT BECAUSE ONE OF THE MAIN FEATURES WILL BE THE OPTION 
+          TO CHANGE THE VOICE OF THE BOT. ANYONE CAN USE AND IMPLEMENT INTO THEIR OWN DISCORD 
+          SERVER. THE BOT WILL ALSO HAVE A COMPANION WEBSITE THAT WILL HOLD ALL THE DETAILS OF THE 
+          BOT. THIS INCLUDES FEATURES, INFORMATION, AND INSTRUCTIONS ON THE BOT.
+         </p>
+      </div>
+
+      <div class="paragraphTwo">
+
+        <h2>CREATOR INFORMATION</h2>
+        <p>THE CREATORS OF SED BOT GO TO A TECHNICAL COLLEGE LOCATED IN A SMALL TOWN 
+          IN WISCONSIN. THIS PAGE AND PROJECT ARE FOR A CAPSTONE CLASS. THEY ARE ALL 
+          REALLY CLOSE TO GRADUTAING THE PROGRAM. PLEASE ENJOY WHAT THE REST OF THIS SITE HAS TO OFFER.
+          IF YOU USE THE BOT, AND HAVE ANY SUGGESTION ON IMPROVEMENTS, PLEASE FEEL FREE 
+          TO GO TO THE SUGGESTIONS PAGE, AND LET US KNOW! IT WOULD BE GREATLY APPRECIATED.
+          I NEED TO TYPE MORE IN THIS SECTION, AND I DON'T KNOW WHAT ELSE TO TYPE. THIS SITE 
+          IS A WORK IN PROGRESS AS YOU CAN SEE. KEVIN IF YOUR READING THIS, PLEASE PLEASE GIVE US A 
+          GOOD GRADE! WORKED HARD ON THIS AND I FEEL LIKE WE DESERVE IT.
+        </p>
+      </div>
+
+    </div> <!-- END OF MOBILE DIV  -->
+
+
+    <script>
+
+      function myFunction() {
+        var x = document.getElementById("myLinks");
+        //var y = document.getElementsById("links");
+        if (x.style.display === "block") {
+          x.style.display = "none";
+        } else {
+          x.style.display = "block";
+          x.style.textAlign = "center";
+          x.style.border = "2px solid black";
+          x.style.backgroundColor = "#bbb";
+          
+        }
+      } 
+
+    </script>
+    
+    <div class="desktop">
+
+      <div class="row">
+
+        <div class="columnOne">
+          <div class="desktopNav">
+            <h3 class="navTitle">NAVIGATION</h3>
+            <a class="home" href="/"><li>HOME</li></a>
+            <a class="information" href="/information"><li>INFORMATION</li></a>
+            <a class="instructions" href="/instructions"><li>INSTRUCTIONS</li></a>
+            <a class="download" href="/download"><li>DOWNLOAD</li></a>
+            <a class="suggest" href="/suggest"><li>SUGGEST</li></a>
+            <a class="more" href="/more"><li>MORE</li></a>
+          </div>
+  
+        </div>
+  
+        <div class="columnTwo"> 
+          <h1>ANONYMOUS BOT</h1>
+          <h3>INFORMATION PAGE</h3>
+  
+          <div class="paragraphOne">
+            <h2 id="paragraphTitle">BOT INFORMATION</h2>
+           <p>THE ANONYMOUS DISCORD BOT IS ONE OF THE LEADING DISCORD BOTS ON THE MARKET. 
+            THE END PRODUCT OF THE BOT WILL BE ABLE TO PROVIDE A PLETHORA AMOUND OF FEATURES 
+            TO THE USER. MOST DISCORD BOTS SPECIALIZE IN ONE ASPECT. THAT MIGHT BE PLAYING MUSIC 
+            OR A DIFFERENT TYPE OF FEATURE. FOR OUR BOT, WE PLAN ON HAVING MANY DIFFERENT FEATURES THAT 
+            THE USER CAN HAVE ACCESS TO. THIS IS GOING TO FIT THE CUSTOMER NEEDS OF A DISCORD BOT BECAUSE 
+            IT'S GOING TO DO MORE THAN JUST A NORMAL DISCORD BOT. WITH THE COMPANION SITE THAT WILL BE 
+            MADE FOR THE USER, THEY WILL HAVE ACCESS TO INFORMATION AND INSTRUCTIONS ON THE BOT. 
+            WE CHOSE THIS NAME FOR THE BOT BECAUSE ONE OF THE MAIN FEATURES WILL BE THE OPTION 
+            TO CHANGE THE VOICE OF THE BOT. ANYONE CAN USE AND IMPLEMENT INTO THEIR OWN DISCORD 
+            SERVER. THE BOT WILL ALSO HAVE A COMPANION WEBSITE THAT WILL HOLD ALL THE DETAILS OF THE 
+            BOT. THIS INCLUDES FEATURES, INFORMATION, AND INSTRUCTIONS ON THE BOT.
+           </p>
+          </div>
+  
+        </div>
+  
+        <div class="columnThree">
+          <div class="paragraphTwo">
+            <h2 id="paragraphTitle">CREATOR INFORMATION</h2>
+            <p>THE CREATORS OF SED BOT GO TO A TECHNICAL COLLEGE LOCATED IN A SMALL TOWN 
+              IN WISCONSIN. THIS PAGE AND PROJECT ARE FOR A CAPSTONE CLASS. THEY ARE ALL 
+              REALLY CLOSE TO GRADUTAING THE PROGRAM. PLEASE ENJOY WHAT THE REST OF THIS SITE HAS TO OFFER.
+              IF YOU USE THE BOT, AND HAVE ANY SUGGESTION ON IMPROVEMENTS, PLEASE FEEL FREE 
+              TO GO TO THE SUGGESTIONS PAGE, AND LET US KNOW! IT WOULD BE GREATLY APPRECIATED.
+              I NEED TO TYPE MORE IN THIS SECTION, AND I DON'T KNOW WHAT ELSE TO TYPE. THIS SITE 
+              IS A WORK IN PROGRESS AS YOU CAN SEE. KEVIN IF YOUR READING THIS, PLEASE PLEASE GIVE US A 
+              GOOD GRADE! WORKED HARD ON THIS AND I FEEL LIKE WE DESERVE IT.
+            </p>
+          </div>
+        </div>
+  
+  
+      </div> <!-- END OF ROW DIV -->
+
+    </div> <!-- END OF DESKTOP DIV -->
     
   </body>
 </html>
