@@ -1,134 +1,133 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #ddd;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #ddd;
 }
 
 .row {
-    margin-top: 7rem;
+	margin-top: 7rem;
 }
 
 .columnOne {
-    float: left;
-    width: 33.33%;
-    text-align: center;
-    margin: 0 auto;
+	float: left;
+	width: 33.33%;
+	text-align: center;
+	margin: 0 auto;
 }
 
 .desktopNav {
-    padding-top: 2rem;
-    width: 70%;
-    margin: 0 auto;
-    /* margin-right: 7rem; */
-    text-align: center;
+	padding-top: 2rem;
+	width: 60%;
+	margin: 0 auto;
+	text-align: center;
 }
 
 .navTitle {
-    letter-spacing: 3px;
-    color: #000;
-    margin-top: 1rem;
-    text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
-    0px -4px 10px rgba(255,255,255,0.3);
-    margin-bottom: -1.5rem;
+	letter-spacing: 3px;
+	color: #000;
+	margin-top: 1rem;
+	text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
+	0px -4px 10px rgba(255,255,255,0.3);
+	margin-bottom: -1.5rem;
 }
 
 #paragraphTitle {
-    letter-spacing: 3px;
-    color: #000;
-    margin-top: 1rem;
-    text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
-    0px -4px 10px rgba(255,255,255,0.3);
+	letter-spacing: 3px;
+	color: #000;
+	margin-top: 1rem;
+	text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
+	0px -4px 10px rgba(255,255,255,0.3);
 }
 
 .mobile {
-    display: none;
+	display: none;
 }
 
 .columnOne li {
-    padding: 15px;
-    border: 3px solid black;
-    list-style-type: none;
-    margin-top: 2.5rem;
+	padding: 15px;
+	border: 3px solid black;
+	list-style-type: none;
+	margin-top: 2.5rem;
 }
 
 .columnOne a {
-    text-decoration: none;
-    color: #000;
-    letter-spacing: 3px;
+	text-decoration: none;
+	color: #000;
+	letter-spacing: 3px;
 }
 
 .columnOne a:visited {
-    text-decoration: none;
-    color: #000;
+	text-decoration: none;
+	color: #000;
 }
 
 
 .columnTwo {
-    float: left;
-    width: 33.33%;
-    text-align: center;
+	float: left;
+	width: 33.33%;
+	text-align: center;
 }
 
 .columnTwo h1 {
-    margin-top: -3rem;
-    font-size: 2.5em;
-    font-weight: lighter;
-    color: #dfdfdf;
-    letter-spacing: 7px;
-    text-shadow: 0 2px 2px #000, 
-        -2px 5px 1px #171717, 
-        -4px 8px 0px #343434, 
-        -6px 11px 0px #565656,
-        -8px 14px 0px #747474,
-        -10px 17px 0px #979797,
-        -12px 20px 0px #b8b8b8,
-        -14px 23px 0px #dfdfdf;
+	margin-top: -3rem;
+	font-size: 2.5em;
+	font-weight: lighter;
+	color: #dfdfdf;
+	letter-spacing: 7px;
+	text-shadow: 0 2px 2px #000, 
+			-2px 5px 1px #171717, 
+			-4px 8px 0px #343434, 
+			-6px 11px 0px #565656,
+			-8px 14px 0px #747474,
+			-10px 17px 0px #979797,
+			-12px 20px 0px #b8b8b8,
+			-14px 23px 0px #dfdfdf;
 }
 
 .columnTwo h3 {
-    letter-spacing: 3px;
-    color: #000;
-    margin-top: 1rem;
-    text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
-    0px -4px 10px rgba(255,255,255,0.3);
+	letter-spacing: 3px;
+	color: #000;
+	margin-top: 1rem;
+	text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
+	0px -4px 10px rgba(255,255,255,0.3);
 }
 
 .columnTwo p {
-    border: 3px solid black;
-    word-spacing: 5px;
-    padding: 30px;
+	border: 3px solid black;
+	word-spacing: 5px;
+	padding: 30px;
 }
 
 .paragraphOne {
-    padding-top: 1rem;
-    width: 90%;
-    margin: 0 auto;
-    text-align: center;
-    margin-left: 1rem;
+	padding-top: 1rem;
+	width: 90%;
+	margin: 0 auto;
+	text-align: center;
+	margin-left: 1rem;
 }
 
 .columnThree {
-    float: left;
-    width: 33.33%;
+	float: left;
+	width: 33.33%;
 }
 
 .columnThree p {
-    border: 3px solid black;
-    word-spacing: 5px;
-    padding: 30px;
+	border: 3px solid black;
+	word-spacing: 5px;
+	padding: 30px;
 }
 
 .paragraphTwo {
-    padding-top: 2rem;
-    width: 70%;
-    margin: 0 auto;
-    text-align: center;
-    margin-left: 5rem;
+	padding-top: 2rem;
+	width: 70%;
+	margin: 0 auto;
+	text-align: center;
+	margin-left: 5rem;
 }
 
 .row:after {
-    content: "";
-    display: table;
-    clear: both;
+	content: "";
+	display: table;
+	clear: both;
 }
 
 @media only screen and (min-width: 300px) and (max-width: 1080px) {

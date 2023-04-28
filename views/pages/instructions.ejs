@@ -10,42 +10,94 @@
 </head>
   <body>
 
-    <div class="desktop">
-      <div class="row">
-
-        <div class="columnOne">
-          <div class="desktopNav">
-            <h3 class="navTitle">NAVIGATION</h3>
-            <a class="home" href="/"><li>HOME</li></a>
-            <a class="information" href="/information"><li>INFORMATION</li></a>
-            <a class="instructions" href="/instructions"><li>INSTRUCTIONS</li></a>
-            <a class="download" href="/download"><li>DOWNLOAD</li></a>
-            <a class="suggest" href="/suggest"><li>SUGGEST</li></a>
-            <a class="more" href="/more"><li>MORE</li></a>
-          </div>
-        </div>
-
-        <div class="columnTwo"> 
-          <h1>ANONYMOUS BOT</h1>
+      <div class="mobile">
+        <div class="topnav">
+          <h1 class="active">Anonymous Bot</h1>
           <h3>INSTRUCTIONS PAGE</h3>
+          <div id="myLinks">
+            <a href="/">HOME</a>
+            <a href="information">INFORMATION</a>
+            <a href="instructions">INSTRUCTIONS</a>
+            <a href="download">DOWNLOAD</a>
+            <a href="suggest">SUGGEST</a>
+            <a href="more">MORE</a>
+          </div>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
         </div>
   
-
-        <div class="entireContent">
-          <h2 id="headerForList">LIST OF COMMANDS</h2><br>
-          <div id="listOfCommands">
-            <ul>
-              <li><span class="commands">/help</span> - Display link to the list of commands.</li>
-              <li><span class="commands">/clear</span> - Deletes a specified amount of messages from the current channel.</li>
-              <li><span class="commands">/giverole</span> - Gives a user a specified role.</li>
-              <li><span class="commands">/removerole</span> - Removes a specified role from a user.</li>
-              <li><span class="commands">/join</span> - Have Anonymous Bot join a voice channel.</li>
-              <li><span class="commands">/disconnect</span> - Have Anonymous Bot disconnect from the voice channel.</li>
-            </ul>
+          <div>
+            <h2 id="headerForList">LIST OF COMMANDS</h2><br>
+            <div id="listOfCommands">
+              <ul class="commands">
+                <li><span class="eachCommand">/help</span> - Display link to the list of commands.</li>
+                <li><span class="eachCommand">/clear</span> - Deletes a specified amount of messages from the current channel.</li>
+                <li><span class="eachCommand">/giverole</span> - Gives a user a specified role.</li>
+                <li><span class="eachCommand">/removerole</span> - Removes a specified role from a user.</li>
+                <li><span class="eachCommand">/join</span> - Have Anonymous Bot join a voice channel.</li>
+                <li><span class="eachCommand">/disconnect</span> - Have Anonymous Bot disconnect from the voice channel.</li>
+              </ul>
+            </div>
           </div>
+  
+      </div> <!-- end of mobile div-->
+
+
+      <script>
+
+        function myFunction() {
+          var x = document.getElementById("myLinks");
+          //var y = document.getElementsById("links");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+            x.style.textAlign = "center";
+            x.style.border = "2px solid black";
+            x.style.backgroundColor = "#bbb";
+            
+          }
+        } 
+  
+      </script>
+
+
+      <div class="desktop">
+        <div class="row">
+
+          <div class="columnOne">
+            <div class="desktopNav">
+              <h3 class="navTitle">NAVIGATION</h3>
+              <a class="home" href="/"><li>HOME</li></a>
+              <a class="information" href="/information"><li>INFORMATION</li></a>
+              <a class="instructions" href="/instructions"><li>INSTRUCTIONS</li></a>
+              <a class="download" href="/download"><li>DOWNLOAD</li></a>
+              <a class="suggest" href="/suggest"><li>SUGGEST</li></a>
+              <a class="more" href="/more"><li>MORE</li></a>
+            </div>
+          </div>
+
+          <div class="columnTwo"> 
+            <h1>ANONYMOUS BOT</h1>
+            <h3>INSTRUCTIONS PAGE</h3>
+            <div>
+              <h2 id="headerForList">LIST OF COMMANDS</h2><br>
+              <div id="listOfCommands">
+                <ul class="commands">
+                  <li><span class="eachCommand">/help</span> - Display link to the list of commands.</li>
+                  <li><span class="eachCommand">/clear</span> - Deletes a specified amount of messages from the current channel.</li>
+                  <li><span class="eachCommand">/giverole</span> - Gives a user a specified role.</li>
+                  <li><span class="eachCommand">/removerole</span> - Removes a specified role from a user.</li>
+                  <li><span class="eachCommand">/join</span> - Have Anonymous Bot join a voice channel.</li>
+                  <li><span class="eachCommand">/disconnect</span> - Have Anonymous Bot disconnect from the voice channel.</li>
+                </ul>
+              </div>
+            </div>
+          </div> <!-- end of columnTwo div-->
         </div>
-      </div>
-    </div> <!-- end of desktop nav -->
-    
+
+      </div> <!-- end of desktop nav -->
+
   </body>
 </html>
