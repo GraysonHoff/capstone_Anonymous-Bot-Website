@@ -114,24 +114,37 @@ body {
 	margin-top: 2rem;
 }
 
-#listOfCommands {
-	border: 3px solid black;
-    text-align: center;
+.commandsList {
+	padding-top: 1rem;
+	width: 90%;
+	margin: 0 auto;
+	text-align: left;
+	margin-left: 1rem;
 }
 
-#headerForList {
-	text-align: center;
+#listTitle {
+	letter-spacing: 2px;
+	color: #000;
+	margin-top: 1rem;
+    text-align: center;
+	text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
+	0px -4px 10px rgba(255,255,255,0.3);
+}
+
+.columnTwo ul {
+	border: 3px solid black;
+	word-spacing: 5px;
+	padding: 30px;
 }
 
 .eachCommand {
 	font-weight: bolder;
 }
-
-.commands {
-    text-align: left;
-}
   
 @media only screen and (min-width: 300px) and (max-width: 550px) {
+
+    
+
     .desktop {
         display: none;
     }
@@ -211,13 +224,12 @@ body {
         width: 80%;
         margin: 0 auto;
         text-align: center;
-        /* margin-left: 7rem; */
         border: 2px solid black;
     }
 
  }
 
-@media only screen and (min-width: 551px) and (max-width: 1080px) {
+@media only screen and (min-width: 550px) and (max-width: 1080px) {
 
     .desktop {
         display: none;

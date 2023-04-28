@@ -130,6 +130,33 @@ body {
 	clear: both;
 }
 
+.commandsList {
+	padding-top: 1rem;
+	width: 90%;
+	margin: 0 auto;
+	text-align: left;
+	margin-left: 1rem;
+}
+
+#listTitle {
+	letter-spacing: 2px;
+	color: #000;
+	margin-top: 1rem;
+    text-align: center;
+	text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
+	0px -4px 10px rgba(255,255,255,0.3);
+}
+
+.columnTwo ul {
+	border: 3px solid black;
+	word-spacing: 5px;
+	padding: 30px;
+}
+
+.eachCommand {
+	font-weight: bolder;
+}
+
 @media only screen and (min-width: 300px) and (max-width: 1080px) {
     .desktop {
         display: none;
@@ -204,6 +231,10 @@ body {
         padding: 15px;
         margin: 1rem;
         text-align: center;
+    }
+
+    .listOfCommands {
+        text-align: left;
     }
 
  }
