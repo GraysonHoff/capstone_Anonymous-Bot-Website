@@ -18,7 +18,7 @@ express()
     res.render('pages/index', {pic: pic, css: css})
   })
   .get("/information", async(req, res) => {
-    var css = "/css/infoCss.css";
+    var css = "/css/css.css";
     res.render('pages/information', {css: css})
   })
   .get("/instructions", async(req, res) => {
@@ -29,7 +29,8 @@ express()
     res.render('pages/download')
   })
   .get("/suggest", async(req, res) => {
-    res.render('pages/suggest')
+    var css = "/css/css.css";
+    res.render('pages/suggest', {css: css})
   })
   .get("/more", async(req, res) => {
     res.render('pages/more')
