@@ -438,13 +438,12 @@ THIS IS THE DOWNLOAD PAGE SECTION
 	
 	.downloadBox a:link {
 		text-decoration: none;
-		background-color: black;
-		color: white;
+		color: #000;
 	}
 	
 	.downloadBox li:hover {
-		background-color :white;
-		color: black;
+		background-color :black;
+		color: white;
 		text-decoration: none;
 	}
 	
@@ -606,7 +605,7 @@ THIS IS THE DOWNLOAD PAGE SECTION
 		text-align: left;
 		font-size: larger;
 	}
-	
+
 }
 
 @media only screen and (min-width: 1441px) and (max-width: 2000px) {
