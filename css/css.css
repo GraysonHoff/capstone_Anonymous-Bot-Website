@@ -422,7 +422,37 @@ THIS IS THE DOWNLOAD PAGE SECTION
 			text-align: left;
 	}
 
+	/* Download page */
 
+	.downloadBox li {
+		border: 3px solid black;
+		font-weight: bold;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+		width: 90%;
+		margin: 0 auto;
+		text-align: center;
+		list-style: none;
+		text-decoration: none;
+	}
+	
+	.downloadBox a:link {
+		text-decoration: none;
+		background-color: black;
+		color: white;
+	}
+	
+	.downloadBox li:hover {
+		background-color :white;
+		color: black;
+		text-decoration: none;
+	}
+	
+	.downloadBox a:visited {
+		color: #000;
+		text-decoration: none;
+	}
+	
 }
 
 @media only screen and (min-width: 550px) and (max-width: 1080px) {
@@ -576,9 +606,7 @@ THIS IS THE DOWNLOAD PAGE SECTION
 		text-align: left;
 		font-size: larger;
 	}
-
 	
-
 }
 
 @media only screen and (min-width: 1441px) and (max-width: 2000px) {
