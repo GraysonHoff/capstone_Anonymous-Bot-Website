@@ -12,28 +12,35 @@ express()
   .use('/css', express.static("css"))
   .set("views", path.join(__dirname, "views"))
   .set("view engine", "ejs")
+  
   .get("/", async(req, res) => {
     var pic = "/images/mask.png";
     var css = "/css/css.css";
     res.render('pages/index', {pic: pic, css: css})
   })
+
   .get("/information", async(req, res) => {
     var css = "/css/css.css";
     res.render('pages/information', {css: css})
   })
-  .get("/instructions", async(req, res) => {
+
+  .get("/commands", async(req, res) => {
     var css = "/css/css.css";
-    res.render('pages/instructions', {css: css})
+    res.render('pages/commands', {css: css})
   })
+
   .get("/download", async(req, res) => {
     var css = "/css/css.css";
     res.render('pages/download', {css: css})
   })
+
   .get("/suggest", async(req, res) => {
     var css = "/css/css.css";
     res.render('pages/suggest', {css: css})
   })
+
   .get("/more", async(req, res) => {
     res.render('pages/more')
   })
+
   .listen(PORT, () => console.log(`Listening on ${PORT}`));
