@@ -433,14 +433,14 @@ THIS IS THE DOWNLOAD PAGE SECTION
 	}  
 
 	.topnav h3 {
-			letter-spacing: 2px;
-			color: #000;
-			margin: 1rem;
-			padding: 10px;
-			text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
-			0px -4px 10px rgba(255,255,255,0.3);
-			text-align: center;
-			border: 2px solid black;
+		letter-spacing: 2px;
+		color: #000;
+		margin: 1rem;
+		padding: 10px;
+		text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
+		0px -4px 10px rgba(255,255,255,0.3);
+		text-align: center;
+		border: 2px solid black;
 	}
 
 	.paragraph {
