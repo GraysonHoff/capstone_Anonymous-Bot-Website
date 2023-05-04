@@ -49,6 +49,11 @@ body {
 	color: #000;
 }
 
+.columnOne li:hover {
+	background: #ccc;
+	transition: transform .8s ease;
+}
+
 
 .columnTwo {
 	float: left;
@@ -71,6 +76,67 @@ body {
 			-12px 20px 0px #b8b8b8,
 			-14px 23px 0px #dfdfdf;
 }
+
+
+/* GLITCH LOGO */
+.glitchLogo {
+	animation: glitch 3s linear infinite;
+}
+
+@keyframes glitch{
+	2%,64%{
+	  transform: translate(4px,0) skew(0deg);
+	}
+	4%,60%{
+	  transform: translate(-4px,0) skew(0deg);
+	}
+	62%{
+	  transform: translate(0,0) skew(5deg); 
+	}
+  }
+
+.glitchLogo:before, .glitchLogo:after{
+	content: attr(title);
+	position: absolute;
+	left: 0;
+}
+
+.glitchLogo:before{
+	animation: glitchTop 1s linear infinite;
+	clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+	-webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+@keyframes glitchTop{
+	2%,64%{
+		transform: translate(4px,-4px);
+	}
+	4%,60%{
+		transform: translate(-4px,4px);
+	}
+	62%{
+		transform: translate(15px,-3px) skew(-15deg); 
+}
+}
+
+.glitchLogo:after{
+	animation: glitchBotom 1.5s linear infinite;
+	clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+	-webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+
+@keyframes glitchBotom{
+	2%,64%{
+		transform: translate(-4px,0);
+	}
+	4%,60%{
+		transform: translate(-4px,0);
+	}
+	62%{
+		transform: translate(-24px,7px) skew(23deg); 
+}
+}
+
 
 .columnTwo h3 {
 	letter-spacing: 3px;
@@ -108,8 +174,33 @@ body {
 }
 
 #maskImage {
-	width: 70%;
-	margin-top: 2rem;
+	width: 40%;
+	margin-top: 4rem;
+}
+
+.desktopImage {
+	padding: 20px;
+}
+
+.desktopImage::before {
+	transform: scaleX(0);
+	transform-origin: bottom right;
+}
+
+.desktopImage:hover::before {
+	transform: scaleX(1);
+	transform-origin: bottom left;
+}
+
+.desktopImage::before {
+	content: " ";
+	display: block;
+	position: absolute;
+	top: 0; right: 0; bottom: 0; left: 0;
+	inset: 0 0 0 0;
+	background: white;
+	z-index: -1;
+	transition: transform .8s ease;
 }
 
 footer {
@@ -377,59 +468,62 @@ THIS IS THE DOWNLOAD PAGE SECTION
 	}
 
 	.topnav {
-			overflow: hidden;
-			position: relative;
+		overflow: hidden;
+		position: relative;
 	}
 
 	.topnav #myLinks {
-			display: none;
+		display: none;
 	}
+
 	.image {
-			text-align: center;
+		text-align: center;
+		margin-top: 2rem;
 	}
 
 	#maskImage {
-			width: 50%;
-			margin-top: -1rem;
+		width: 50%;
+		margin-top: -1rem;
+		margin-bottom: 2rem;
 	}
 
 	.topnav a {
-			color: black;
-			padding: 14px 16px;
-			text-decoration: none;
-			margin-left: 5px;
-			display: block;
+		color: black;
+		padding: 14px 16px;
+		text-decoration: none;
+		margin-left: 5px;
+		display: block;
 	}
 
 	.topnav a.icon {
-	/* background: white; */
-	display: block;
-	position: absolute;
-	right: 0;
-	top: 0;
-	border: 1px solid black;
+		/* background: white; */
+		display: block;
+		position: absolute;
+		right: 0;
+		top: 0;
+		border: 1px solid black;
 	}
 
 	.myLinks a {
-	border: 1px solid black;
+		border: 1px solid black;
 	}
 
 	.active {
-	padding: 5px 16px;
-	margin-right: 20px;
-	color: black;
-	font-size: 40px;
-	font-weight: lighter;
-	color: #dfdfdf;
-	letter-spacing: 7px;
-	text-shadow: 0 2px 2px #000, 
-			-2px 5px 1px #171717, 
-			-4px 8px 0px #343434, 
-			-6px 11px 0px #565656,
-			-8px 14px 0px #747474,
-			-10px 17px 0px #979797,
-			-12px 20px 0px #b8b8b8,
-			-14px 23px 0px #dfdfdf;
+		padding: 5px 16px;
+		margin-right: 20px;
+		color: black;
+		font-size: 40px;
+		font-weight: lighter;
+		color: #dfdfdf;
+		letter-spacing: 7px;
+		text-shadow: 0 2px 2px #000, 
+				-2px 5px 1px #171717, 
+				-4px 8px 0px #343434, 
+				-6px 11px 0px #565656,
+				-8px 14px 0px #747474,
+				-10px 17px 0px #979797,
+				-12px 20px 0px #b8b8b8,
+				-14px 23px 0px #dfdfdf;
 	}  
 
 	.topnav h3 {
@@ -444,12 +538,12 @@ THIS IS THE DOWNLOAD PAGE SECTION
 	}
 
 	.paragraph {
-			padding: 20px;
-			width: 80%;
-			margin: 0 auto;
-			text-align: center;
-			border: 2px solid black;
-			font-size: 20px;
+		padding: 20px;
+		width: 80%;
+		margin: 0 auto;
+		text-align: center;
+		border: 2px solid black;
+		font-size: 20px;
 	}
 
 	/* INFORMATION PAGE */
@@ -485,7 +579,6 @@ THIS IS THE DOWNLOAD PAGE SECTION
 	}
 
 	/* Download page */
-
 	.downloadBox li {
 		border: 3px solid black;
 		font-weight: bold;
@@ -518,59 +611,60 @@ THIS IS THE DOWNLOAD PAGE SECTION
 
 @media only screen and (min-width: 550px) and (max-width: 1080px) {
 
-.desktop {
+	.desktop {
 		display: none;
-}
+	}
 
-.mobile {
+	.mobile {
 		display: unset;
-}
+	}
 
-.logo {
-	text-decoration: none;
-	color: #dfdfdf;
-}
+	.logo {
+		text-decoration: none;
+		color: #dfdfdf;
+	}
 
-.topnav {
+	.topnav {
 		overflow: hidden;
 		position: relative;
 		text-align: center;
-}
+	}
 
-.topnav #myLinks {
+	.topnav #myLinks {
 		display: none;
-}
-.image {
+	}
+	.image {
 		text-align: center;
-}
+	}
 
-#maskImage {
+	#maskImage {
 		width: 30%;
-		margin-top: -1rem;
-}
+		margin-top: 2rem;
+		margin-bottom: 2rem;
+	}
 
-.topnav a {
+	.topnav a {
 		color: black;
 		padding: 14px 16px;
 		text-decoration: none;
 		margin-left: 5px;
 		display: block;
-}
+	}
 
-.topnav a.icon {
+	.topnav a.icon {
 		/* background: white; */
 		display: block;
 		position: absolute;
 		right: 0;
 		top: 0;
 		border: 1px solid black;
-}
+	}
 
-.myLinks a {
+	.myLinks a {
 		border: 1px solid black;
-}
+	}
 
-.active {
+	.active {
 		padding: 5px 16px;
 		margin-right: 20px;
 		color: black;
@@ -586,9 +680,9 @@ THIS IS THE DOWNLOAD PAGE SECTION
 				-10px 17px 0px #979797,
 				-12px 20px 0px #b8b8b8,
 				-14px 23px 0px #dfdfdf;
-}  
+	}  
 
-.topnav h3 {
+	.topnav h3 {
 		letter-spacing: 2px;
 		color: #000;
 		margin: 1rem;
@@ -597,9 +691,9 @@ THIS IS THE DOWNLOAD PAGE SECTION
 		0px -4px 10px rgba(255,255,255,0.3);
 		text-align: center;
 		border: 2px solid black;
-}
+	}
 
-.paragraph {
+	.paragraph {
 		padding: 20px;
 		width: 80%;
 		margin: 0 auto;
@@ -607,68 +701,66 @@ THIS IS THE DOWNLOAD PAGE SECTION
 		/* margin-left: 7rem; */
 		border: 2px solid black;
 		font-size: 20px;
-}
+	}
 
-.paragraphTwo {
+	.paragraphTwo {
 		margin: 0;
 		width: 80%;
 		text-align: center;
 		margin: 0 auto;
-}
+	}
 
-.paragraphTwo p {
+	.paragraphTwo p {
 		border: 3px solid black;
 		word-spacing: 5px;
 		padding: 30px;
-}
+	}
 
-#infoParaOne, #infoParaTwo {
+	#infoParaOne, #infoParaTwo {
 		text-align: left;
 		font-size: larger;
-}
+	}
 
-/* instructions */
-
-.divOne {
+	/* instructions */
+	.divOne {
 		all: revert;
 		border: 2px solid black;
 		padding: 15px;
 		margin: 1rem;
 		text-align: center;
-}
+	}
 
-.listOfCommands {
+	.listOfCommands {
 		text-align: left;
-}
+	}
 
 	/* download page */
+	.downloadBox li {
+		border: 3px solid black;
+		font-weight: bold;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+		width: 90%;
+		margin: 0 auto;
+		text-align: center;
+		list-style: none;
+		text-decoration: none;
+	}
 
-.downloadBox li {
-	border: 3px solid black;
-	font-weight: bold;
-	padding-top: 1rem;
-	padding-bottom: 1rem;
-	width: 90%;
-	margin: 0 auto;
-	text-align: center;
-	list-style: none;
-	text-decoration: none;
-}
+	.downloadBox a:link {
+		text-decoration: none;
+	}
 
-.downloadBox a:link {
-	text-decoration: none;
-}
+	.downloadBox li:hover {
+		background-color :black;
+		color: white;
+		text-decoration: none;
+	}
 
-.downloadBox li:hover {
-	background-color :black;
-	color: white;
-	text-decoration: none;
-}
-
-.downloadBox a:visited {
-	color: #000;
-	text-decoration: none;
-}
+	.downloadBox a:visited {
+		color: #000;
+		text-decoration: none;
+	}
 
 }
 
@@ -684,6 +776,11 @@ THIS IS THE DOWNLOAD PAGE SECTION
 	.logo {
 		text-decoration: none;
 		color: #dfdfdf;
+	}
+
+	#maskImage {
+		width: 60%;
+		margin-top: 4rem;
 	}
 
 	.paragraph {
@@ -707,8 +804,7 @@ THIS IS THE DOWNLOAD PAGE SECTION
 		font-size: larger;
 	}
 
-		/* Download Page */
-
+	/* Download Page */
 	.downloadBox li {
 		border: 3px solid black;
 		font-weight: bold;
@@ -740,115 +836,116 @@ THIS IS THE DOWNLOAD PAGE SECTION
 
 @media only screen and (min-width: 1441px) and (max-width: 2000px) {
 
-.desktopNav {
+	.desktopNav {
 		padding-top: 2rem;
 		width: 50%;
 		margin: 0 auto;
 		margin-right: 4rem;
 		text-align: center;
-}
+	}
 
+	.logo {
+		text-decoration: none;
+		color: #dfdfdf;
+	}
 
-.logo {
-	text-decoration: none;
-	color: #dfdfdf;
-}
+	#maskImage {
+		width: 50%;
+		margin-top: 5rem;
+	}
 
-.paragraph {
+	.paragraph {
 		margin: 0;
 		width: 80%;
 		text-align: center;
 		margin-left: 3rem;;
-}
+	}
 
 	/* Download Page */
+	.downloadBox li {
+		border: 3px solid black;
+		font-weight: bold;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+		width: 90%;
+		margin: 0 auto;
+		text-align: center;
+		list-style: none;
+		text-decoration: none;
+	}
 
-.downloadBox li {
-	border: 3px solid black;
-	font-weight: bold;
-	padding-top: 1rem;
-	padding-bottom: 1rem;
-	width: 90%;
-	margin: 0 auto;
-	text-align: center;
-	list-style: none;
-	text-decoration: none;
-}
+	.downloadBox a:link {
+		text-decoration: none;
+	}
 
-.downloadBox a:link {
-	text-decoration: none;
-}
+	.downloadBox li:hover {
+		background-color :black;
+		color: white;
+		text-decoration: none;
+	}
 
-.downloadBox li:hover {
-	background-color :black;
-	color: white;
-	text-decoration: none;
-}
-
-.downloadBox a:visited {
-	color: #000;
-	text-decoration: none;
-}
+	.downloadBox a:visited {
+		color: #000;
+		text-decoration: none;
+	}
 
 }
 
 @media only screen and (min-width: 2001px) and (max-width: 3500px) {
 
-.desktopNav {
+	.desktopNav {
 		padding-top: 2rem;
 		width: 30%;
 		margin: 0 auto;
 		margin-right: 4rem;
 		text-align: center;
-}
+	}
 
 
-.logo {
-	text-decoration: none;
-	color: #dfdfdf;
-}
+	.logo {
+		text-decoration: none;
+		color: #dfdfdf;
+	}
 
-.paragraph {
+	.paragraph {
 		margin: 0;
 		width: 60%;
 		text-align: center;
 		margin-left: 3rem;
-}
+	}
 
-#infoParaOne, #infoParaTwo {
+	#infoParaOne, #infoParaTwo {
 		text-align: left;
 		font-size: larger;
-}
+	}
 
 	/* Download Page */
+	.downloadBox li {
+		border: 3px solid black;
+		font-weight: bold;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+		width: 90%;
+		margin: 0 auto;
+		text-align: center;
+		list-style: none;
+		text-decoration: none;
+	}
 
-.downloadBox li {
-	border: 3px solid black;
-	font-weight: bold;
-	padding-top: 1rem;
-	padding-bottom: 1rem;
-	width: 90%;
-	margin: 0 auto;
-	text-align: center;
-	list-style: none;
-	text-decoration: none;
-}
+	.downloadBox a:link {
+		text-decoration: none;
+	}
 
-.downloadBox a:link {
-	text-decoration: none;
-}
+	.downloadBox li:hover {
+		background-color :black;
+		color: white;
+		text-decoration: none;
+	}
 
-.downloadBox li:hover {
-	background-color :black;
-	color: white;
-	text-decoration: none;
-}
-
-.downloadBox a:visited {
-	color: #000;
-	text-decoration: none;
-}
-
+	.downloadBox a:visited {
+		color: #000;
+		text-decoration: none;
+	}
 
 }
 
@@ -859,7 +956,7 @@ THIS IS THE DOWNLOAD PAGE SECTION
 		color: #dfdfdf;
 	}
 
-.columnTwo h1 {
+	.columnTwo h1 {
 		margin-top: -3rem;
 		font-size: 5.5em;
 		font-weight: lighter;
@@ -873,78 +970,77 @@ THIS IS THE DOWNLOAD PAGE SECTION
 				-10px 17px 0px #979797,
 				-12px 20px 0px #b8b8b8,
 				-14px 23px 0px #dfdfdf;
-}
+	}
 
-.columnTwo h3 {
+	.columnTwo h3 {
 		font-size: 2rem;
 		letter-spacing: 3px;
 		color: #000;
 		margin-top: 1rem;
 		text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
 		0px -4px 10px rgba(255,255,255,0.3);
-}
+	}
 
-.desktopNav {
+	.desktopNav {
 		padding-top: 4rem;
 		width: 30%;
 		margin: 0 auto;
 		margin-right: 7rem;
 		text-align: center;
-}
+	}
 
-.paragraph {
+	.paragraph {
 		font-size: 2rem;
 		margin: 0;
 		width: 60%;
 		text-align: center;
 		margin-left: 3rem;
-}
+	}
 
-.columnOne li {
+	.columnOne li {
 		padding: 15px;
 		border: 3px solid black;
 		list-style-type: none;
 		margin-top: 4.5rem;
-}
+	}
 
 
-.desktopNav a {
+	.desktopNav a {
 		font-size: 2rem;
-}
+	}
 
-#infoParaOne, #infoParaTwo {
+	#infoParaOne, #infoParaTwo {
 		text-align: left;
 		font-size: larger;
-}
+	}
 
 	/* Download Page */
+	.downloadBox li {
+		border: 3px solid black;
+		font-weight: bold;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+		width: 90%;
+		margin: 0 auto;
+		text-align: center;
+		list-style: none;
+		text-decoration: none;
+	}
 
-.downloadBox li {
-	border: 3px solid black;
-	font-weight: bold;
-	padding-top: 1rem;
-	padding-bottom: 1rem;
-	width: 90%;
-	margin: 0 auto;
-	text-align: center;
-	list-style: none;
-	text-decoration: none;
-}
+	.downloadBox a:link {
+		text-decoration: none;
+	}
 
-.downloadBox a:link {
-	text-decoration: none;
-}
+	.downloadBox li:hover {
+		background-color :black;
+		color: white;
+		text-decoration: none;
+	}
 
-.downloadBox li:hover {
-	background-color :black;
-	color: white;
-	text-decoration: none;
-}
-
-.downloadBox a:visited {
-	color: #000;
-	text-decoration: none;
-}
+	.downloadBox a:visited {
+		color: #000;
+		text-decoration: none;
+	}
 
 }
 
