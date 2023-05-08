@@ -14,8 +14,15 @@
     <div class="mobile">
       <div class="topnav">
         <div class="glitchLogo"><a class="logo" href="/"><h1 class="active">ANONYMOUS BOT</h1></a></div>
+        
+        <div class="menuBtn">
+          <div class="menuBtn_burger">
+          </div>
+        </div>
+
         <h3>INFORMATION PAGE</h3>
-        <div id="myLinks">
+
+        <div class="links push">
           <a href="/">HOME</a>
           <a href="information">INFORMATION</a>
           <a href="commands">COMMANDS</a>
@@ -23,64 +30,58 @@
           <a href="suggest">SUGGEST</a>
           <a href="more">MORE</a>
         </div>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-          <i class="fa fa-bars"></i>
-        </a>
+
+        <div class="paragraphOne">
+          <h2>BOT INFORMATION</h2>
+          <p>
+            The anonymous discord bot is one of the leading discord bots on the market.
+            The end product of the bot will be able to provide a plethora amound of features 
+            to the user. Most discord bots specialize in one aspect. That might be playing music 
+            or a different type of feature. For our bot, we plan on having many different features that 
+            the user can have access to. This is going to fit the customer needs of a discord bot because 
+            it's going to do more than just a normal discord bot. With the comanion site that will be made 
+            for the user, they will have acess to information and commands for the bot.
+            We chose this name for the bot because one of the main features will be the option 
+            to change the voice of the bot. Anyone can use and implement their own discord server. 
+            The bot will also have a companion website that will hold all the details of the 
+            bot. This includes features, information, and a list of commands for the bot.
+           </p>
+        </div>
+  
+        <div class="paragraphTwo">
+          <h2>CREATOR INFORMATION</h2>
+          <p>
+            The creators of said bot go to a technical college located in a small town 
+            in Wisconsin. This page and project are for a capstone class. They are all 
+            really close to graduating the program. Please enjoy what the rest of this site has to offer.
+            If you use the bot, and have any suggestions on improvements, please feel free to 
+            go to the suggestions page, and let us know! It would be greatly appreciated.
+            I need to type more in this section, and I don't know what else to type. This site 
+            is a work in progress as you can see. Kevin if you're reading this, please please give us a 
+            good grade! We all worked hard on this and I feel like we deserve it.
+          </p>
+        </div>
+
       </div>
-
-
-      <div class="paragraphOne">
-
-        <h2>BOT INFORMATION</h2>
-        <p>
-          The anonymous discord bot is one of the leading discord bots on the market.
-          The end product of the bot will be able to provide a plethora amound of features 
-          to the user. Most discord bots specialize in one aspect. That might be playing music 
-          or a different type of feature. For our bot, we plan on having many different features that 
-          the user can have access to. This is going to fit the customer needs of a discord bot because 
-          it's going to do more than just a normal discord bot. With the comanion site that will be made 
-          for the user, they will have acess to information and commands for the bot.
-          We chose this name for the bot because one of the main features will be the option 
-          to change the voice of the bot. Anyone can use and implement their own discord server. 
-          The bot will also have a companion website that will hold all the details of the 
-          bot. This includes features, information, and a list of commands for the bot.
-         </p>
-      </div>
-
-      <div class="paragraphTwo">
-
-        <h2>CREATOR INFORMATION</h2>
-        <p>
-          The creators of said bot go to a technical college located in a small town 
-          in Wisconsin. This page and project are for a capstone class. They are all 
-          really close to graduating the program. Please enjoy what the rest of this site has to offer.
-          If you use the bot, and have any suggestions on improvements, please feel free to 
-          go to the suggestions page, and let us know! It would be greatly appreciated.
-          I need to type more in this section, and I don't know what else to type. This site 
-          is a work in progress as you can see. Kevin if you're reading this, please please give us a 
-          good grade! We all worked hard on this and I feel like we deserve it.
-        </p>
-      </div>
-
     </div> <!-- END OF MOBILE DIV  -->
 
 
     <script>
+      const menuBtn = document.querySelector('.menuBtn');
+      let menuOpen = false;
+      const links = document.querySelector('.links');
+      menuBtn.addEventListener('click', () => {
+        if(!menuOpen) {
+          menuBtn.classList.add('open');
+          links.classList.add('open');
+          menuOpen = true;
 
-      function myFunction() {
-        var x = document.getElementById("myLinks");
-        //var y = document.getElementsById("links");
-        if (x.style.display === "block") {
-          x.style.display = "none";
         } else {
-          x.style.display = "block";
-          x.style.textAlign = "center";
-          x.style.border = "2px solid black";
-          x.style.backgroundColor = "#bbb";
-          
+          menuBtn.classList.remove('open');
+          links.classList.remove('open');
+          menuOpen = false;
         }
-      } 
-
+      });
     </script>
     
     <div class="desktop">

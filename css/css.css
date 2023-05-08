@@ -54,6 +54,98 @@ body {
 	transition: transform .8s ease;
 }
 
+/* PHONE BURGER MENU */
+
+.menuBtn {
+	/* position: absolute; */
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 70px;
+	height: 70px;
+	cursor: pointer;
+	transition: all .2s ease-in-out;
+	/* border: 2px solid rgb(0, 0, 0); */
+	float: right;
+	bottom: 70px;
+	margin-right: 5px;
+}
+
+.menuBtn_burger {
+	width: 50px;
+	height: 6px;
+	background: #fff;
+	border-radius: 5px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+	transition: all .2s ease-in-out;
+}
+.menuBtn_burger::before,
+.menuBtn_burger::after {
+	content: '';
+	position: absolute;
+	width: 50px;
+	height: 6px;
+	background: #fff;
+	border-radius: 5px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+	transition: all .2s ease-in-out;
+}
+.menuBtn_burger::before {
+	transform: translateY(-16px);
+}
+.menuBtn_burger::after {
+	transform: translateY(16px);
+}
+/* ANIMATION */
+.menuBtn.open .menuBtn_burger {
+	transform: translateX(-50px);
+	background: transparent;
+	box-shadow: none;
+}
+.menuBtn.open .menuBtn_burger::before {
+	transform: rotate(45deg) translate(35px, -35px);
+}
+.menuBtn.open .menuBtn_burger::after {
+	transform: rotate(-45deg) translate(35px, 35px);
+}
+
+.links {
+	text-align: center;
+	letter-spacing: 2px;
+	/* border: 1PX SOLID HOTPINK */
+	/* display: none; */
+	position: absolute;
+	/* top: 0; */
+	/* right: 0; */
+	width: 100%;
+	/* height: 60%; */
+	background: rgba(0, 0, 0, 0.9);
+	transform: translateY(-302%);
+	transition: transform 0.35s ease;
+	/* z-index: 10; */
+	box-shadow: 0 0 12px 2px rgba(0,0,0,0.25);
+}
+
+.topnav {
+	position: absolute;
+}
+
+.links a {
+	color: white;
+	font-size: large;
+	text-decoration: underline;
+}
+
+.links a:hover {
+	color:rgba(255, 255, 255, 0.5);
+}
+
+.links.open {
+	/* display: unset; */
+    overflow: auto;
+    transform: translateY(0rem);
+}
 
 .columnTwo {
 	float: left;
@@ -483,30 +575,30 @@ THIS IS THE DOWNLOAD PAGE SECTION
 
 	#maskImage {
 		width: 50%;
-		margin-top: -1rem;
+		margin-top: 1rem;
 		margin-bottom: 2rem;
 	}
 
 	.topnav a {
-		color: black;
-		padding: 14px 16px;
+		/* color: black; */
+		padding: 18px 16px;
 		text-decoration: none;
-		margin-left: 5px;
+		margin-left: 1px;
 		display: block;
 	}
 
 	.topnav a.icon {
-		/* background: white; */
+		background: white;
 		display: block;
 		position: absolute;
 		right: 0;
 		top: 0;
-		border: 1px solid black;
+		/* border: 1px solid black; */
 	}
 
 	.myLinks a {
-		border: 1px solid black;
-	}
+		/* border: 1px solid black; */
+	} 
 
 	.active {
 		padding: 5px 16px;
@@ -535,6 +627,7 @@ THIS IS THE DOWNLOAD PAGE SECTION
 		0px -4px 10px rgba(255,255,255,0.3);
 		text-align: center;
 		border: 2px solid black;
+		padding-left: 50px;
 	}
 
 	.paragraph {
@@ -627,7 +720,7 @@ THIS IS THE DOWNLOAD PAGE SECTION
 	.topnav {
 		overflow: hidden;
 		position: relative;
-		text-align: center;
+		/* text-align: center; */
 	}
 
 	.topnav #myLinks {
@@ -640,15 +733,17 @@ THIS IS THE DOWNLOAD PAGE SECTION
 	#maskImage {
 		width: 30%;
 		margin-top: 2rem;
-		margin-bottom: 2rem;
+		margin-bottom: 4rem;
+		padding-left: 75px;
 	}
 
 	.topnav a {
-		color: black;
+		color: white;
 		padding: 14px 16px;
 		text-decoration: none;
 		margin-left: 5px;
 		display: block;
+		margin-bottom: 10px;
 	}
 
 	.topnav a.icon {
@@ -691,6 +786,7 @@ THIS IS THE DOWNLOAD PAGE SECTION
 		0px -4px 10px rgba(255,255,255,0.3);
 		text-align: center;
 		border: 2px solid black;
+		padding-left: 55px;
 	}
 
 	.paragraph {
