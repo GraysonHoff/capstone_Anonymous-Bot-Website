@@ -88,7 +88,6 @@ body {
 
 .columnThree p {
 	border: 3px solid black;
-	word-spacing: 5px;
 	padding: 30px;
 }
 
@@ -186,7 +185,6 @@ THIS IS THE INFORMATION PAGE SECTION
 
 .paragraphOne p {
 	border: 3px solid black;
-	word-spacing: 5px;
 	padding: 30px;
 }
 
@@ -233,7 +231,6 @@ margin-left: 1rem;
 
 .columnTwo ul {
 border: 3px solid black;
-word-spacing: 5px;
 padding: 30px;
 }
 
@@ -304,7 +301,6 @@ THIS IS THE SUGGESTIONS PAGE SECTION
 	width: 60%;
 	margin: 0 auto;
 	border: 3px solid black;
-	word-spacing: 5px;
 	padding: 30px;
 	font-size: 20px;
 	margin-top: 2rem;
@@ -462,7 +458,6 @@ THIS IS THE DOWNLOAD PAGE SECTION
 
 	.paragraphTwo p {
 			border: 3px solid black;
-			word-spacing: 5px;
 			padding: 30px;
 	}
 
@@ -618,7 +613,6 @@ THIS IS THE DOWNLOAD PAGE SECTION
 
 .paragraphTwo p {
 		border: 3px solid black;
-		word-spacing: 5px;
 		padding: 30px;
 }
 
