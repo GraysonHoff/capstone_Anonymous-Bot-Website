@@ -12,9 +12,16 @@
 
     <div class="mobile">
       <div class="topnav">
-        <a href="/"><h1 class="active">ANONYMOUS BOT</h1></a>
+        <div class="glitchLogo"><a class="logo" href="/"><h1 class="active">ANONYMOUS BOT</h1></a></div>
+
+        <div class="menuBtn">
+          <div class="menuBtn_burger">
+          </div>
+        </div>
+
         <h3>SUGGEST PAGE</h3>
-        <div id="myLinks">
+
+        <div class="links push">
           <a href="/">HOME</a>
           <a href="information">INFORMATION</a>
           <a href="commands">COMMANDS</a>
@@ -22,12 +29,36 @@
           <a href="suggest">SUGGEST</a>
           <a href="more">MORE</a>
         </div>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-          <i class="fa fa-bars"></i>
-        </a>
+
+        <div class="mobileSuggestP">
+          <p>Welcome to the suggestions page. Here you can send 
+                us emails with any suggestions about the bot or website. 
+                Emails will be send to our personal Anonymous Bot email and 
+                we will get back to you as soon as we can. Thank you for your 
+                suggestions!
+          </p>
+        </div>
+  
+        <div class="mobileSuggest">
+            <div class="suggestForm">
+              <form method="post">
+                <h4>NAME</h4>
+                <input type="text" id="name" autocomplete="off"><br>
+                <h4>EMAIL</h4>
+                <input type="email" id="email" autocomplete="off"><br>
+                <h4>SUBJECT</h4>
+                <input type="text" id="subject" autocomplete="off"><br>
+                <h4>MESSAGE</h4>
+                <textarea id="message" cols="30" rows="10"></textarea><br>
+                <button id="btn" class="buttons">SEND</button>
+                <button id="clr" class="buttons">CLEAR</button>
+              </form>
+            </div>
+        </div>
+
       </div>
       
-      <div class="mobileSuggestP">
+      <!-- <div class="mobileSuggestP">
         <p>Welcome to the suggestions page. Here you can send 
               us emails with any suggestions about the bot or website. 
               Emails will be send to our personal Anonymous Bot email and 
@@ -51,26 +82,26 @@
               <button id="clr" class="buttons">CLEAR</button>
             </form>
           </div>
-      </div>
+      </div> -->
 
     </div>
 
     <script>
+      const menuBtn = document.querySelector('.menuBtn');
+      let menuOpen = false;
+      const links = document.querySelector('.links');
+      menuBtn.addEventListener('click', () => {
+        if(!menuOpen) {
+          menuBtn.classList.add('open');
+          links.classList.add('open');
+          menuOpen = true;
 
-      function myFunction() {
-        var x = document.getElementById("myLinks");
-        //var y = document.getElementsById("links");
-        if (x.style.display === "block") {
-          x.style.display = "none";
         } else {
-          x.style.display = "block";
-          x.style.textAlign = "center";
-          x.style.border = "2px solid black";
-          x.style.backgroundColor = "#bbb";
-          
+          menuBtn.classList.remove('open');
+          links.classList.remove('open');
+          menuOpen = false;
         }
-      } 
-
+      });
     </script>
 
     <div class="desktop">
@@ -89,7 +120,7 @@
         </div>
   
         <div class="columnTwo"> 
-          <a class="logo" href="/"><h1>ANONYMOUS BOT</h1></a>
+          <div class="glitchLogo"><a class="logo" href="/"><h1>ANONYMOUS BOT</h1></a></div>
           <h3>SUGGESTIONS PAGE</h3>
           <div class="suggestForm">
             <form method="post">

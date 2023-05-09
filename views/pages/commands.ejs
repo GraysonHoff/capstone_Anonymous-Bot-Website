@@ -12,9 +12,16 @@
 
       <div class="mobile">
         <div class="topnav">
-          <a href="/"><h1 class="active">ANONYMOUS BOT</h1></a>
+          <div class="glitchLogo"><a class="logo" href="/"><h1 class="active">ANONYMOUS BOT</h1></a></div>
+
+          <div class="menuBtn">
+            <div class="menuBtn_burger">
+            </div>
+          </div>
+          
           <h3>COMMANDS PAGE</h3>
-          <div id="myLinks">
+
+          <div class="links push">
             <a href="/">HOME</a>
             <a href="information">INFORMATION</a>
             <a href="commands">COMMANDS</a>
@@ -22,11 +29,7 @@
             <a href="suggest">SUGGEST</a>
             <a href="more">MORE</a>
           </div>
-          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-          </a>
-        </div>
-  
+
           <div class="divOne">
             <h2 class="listTitle">LIST OF COMMANDS</h2><br>
             <div class="listOfCommands">
@@ -40,26 +43,29 @@
               </ul>
             </div>
           </div>
-  
+          
+        </div>
+    
       </div> <!-- end of mobile div-->
 
 
-      <script>
-        function myFunction() {
-          var x = document.getElementById("myLinks");
-          //var y = document.getElementsById("links");
-          if (x.style.display === "block") {
-            x.style.display = "none";
-          } else {
-            x.style.display = "block";
-            x.style.textAlign = "center";
-            x.style.border = "2px solid black";
-            x.style.backgroundColor = "#bbb";
-            
-          }
-        } 
-      </script>
+    <script>
+      const menuBtn = document.querySelector('.menuBtn');
+      let menuOpen = false;
+      const links = document.querySelector('.links');
+      menuBtn.addEventListener('click', () => {
+        if(!menuOpen) {
+          menuBtn.classList.add('open');
+          links.classList.add('open');
+          menuOpen = true;
 
+        } else {
+          menuBtn.classList.remove('open');
+          links.classList.remove('open');
+          menuOpen = false;
+        }
+      });
+    </script>
 
       <div class="desktop">
         <div class="row">
@@ -77,7 +83,7 @@
           </div>
 
           <div class="columnTwo"> 
-            <a class="logo" href="/"><h1>ANONYMOUS BOT</h1></a>
+            <div class="glitchLogo"><a class="logo" href="/"><h1>ANONYMOUS BOT</h1></a></div>
             <h3>COMMANDS PAGE</h3>
 
             <div class="commandsList">
