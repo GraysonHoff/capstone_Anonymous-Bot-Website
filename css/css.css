@@ -35,7 +35,8 @@ body {
 	border: 3px solid black;
 	list-style-type: none;
 	margin-top: 2.5rem;
-
+	text-decoration: none;
+	transition: 0.4s;
 }
 
 .columnOne a {
@@ -50,8 +51,9 @@ body {
 }
 
 .columnOne li:hover {
-	background: #ccc;
-	transition: transform .8s ease;
+	background: grey;
+	box-shadow: 0 0 35px grey;
+	letter-spacing: 0.35em;
 }
 
 /* PHONE BURGER MENU */
@@ -175,19 +177,19 @@ body {
 	animation: glitch 3s linear infinite;
 }
 
-@keyframes glitch{
-	2%,64%{
-	  transform: translate(4px,0) skew(0deg);
-	}
-	4%,60%{
-	  transform: translate(-4px,0) skew(0deg);
-	}
-	62%{
-	  transform: translate(0,0) skew(5deg); 
-	}
+@keyframes glitch {
+		2%,64%{
+			transform: translate(4px,0) skew(0deg);
+		}
+		4%,60%{
+			transform: translate(-4px,0) skew(0deg);
+		}
+		62%{
+			transform: translate(0,0) skew(5deg); 
+		}
   }
 
-.glitchLogo:before, .glitchLogo:after{
+.glitchLogo:before, .glitchLogo:after {
 	content: attr(title);
 	position: absolute;
 	left: 0;
@@ -199,7 +201,7 @@ body {
 	-webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
 }
 
-@keyframes glitchTop{
+@keyframes glitchTop {
 	2%,64%{
 		transform: translate(4px,-4px);
 	}
@@ -211,22 +213,82 @@ body {
 }
 }
 
-.glitchLogo:after{
+.glitchLogo:after {
 	animation: glitchBotom 1.5s linear infinite;
 	clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
 	-webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
 }
 
-@keyframes glitchBotom{
+@keyframes glitchBotom {
+		2%,64%{
+			transform: translate(-4px,0);
+		}
+		4%,60%{
+			transform: translate(-4px,0);
+		}
+		62%{
+			transform: translate(-24px,7px) skew(23deg); 
+	}
+}
+
+/* GLITCH EFFECT FOR NAVIGATIN LINKS */
+
+.glitchEffect {
+	animation: glitch 3s linear infinite;
+}
+
+@keyframes glitch {
+		2%,64%{
+			transform: translate(4px,0) skew(0deg);
+		}
+		4%,60%{
+			transform: translate(-4px,0) skew(0deg);
+		}
+		62%{
+			transform: translate(0,0) skew(5deg); 
+		}
+  }
+
+.glitchEffect:before, .glitchLogo:after {
+	content: attr(title);
+	position: absolute;
+	left: 0;
+}
+
+.glitchEffect:before{
+	animation: glitchTop 1s linear infinite;
+	clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+	-webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+@keyframes glitchTop {
 	2%,64%{
-		transform: translate(-4px,0);
+		transform: translate(4px,-4px);
 	}
 	4%,60%{
-		transform: translate(-4px,0);
+		transform: translate(-4px,4px);
 	}
 	62%{
-		transform: translate(-24px,7px) skew(23deg); 
+		transform: translate(15px,-3px) skew(-15deg); 
 }
+}
+
+.glitchEffect:after {
+	animation: glitchBotom 1.5s linear infinite;
+	clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+	-webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+
+@keyframes glitchBotom {
+		2%,64%{
+			transform: translate(-4px,0);
+		}
+		4%,60%{
+			transform: translate(-4px,0);
+		}
+		62%{
+			transform: translate(-24px,7px) skew(23deg); 
+	}
 }
 
 
@@ -523,15 +585,18 @@ THIS IS THE DOWNLOAD PAGE SECTION
 	text-align: center;
 	list-style: none;
 	text-decoration: none;
+	transition: 0.4s;
 }
 
 .downloadBox a:link {
 	text-decoration: none;
+	color: white;
 }
 
 .downloadBox li:hover {
-	background-color :black;
-	color: white;
+	background: grey;
+	box-shadow: 0 0 50px grey;
+	letter-spacing: 0.1em;
 	text-decoration: none;
 }
 
