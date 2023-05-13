@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anonymous Bot</title>
+  <link rel="stylesheet" href="<%= css %>">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+  <body>
+
+    <div class="mobile">
+      
+      <div class="topnav">
+        <div class="glitchLogo">
+          <a class="logo" href="/"><h1 class="active">ANONYMOUS BOT</h1></a>
+        </div>
+
+        <div class="menuBtn">
+          <div class="menuBtn_burger">
+          </div>
+        </div>
+
+        <h3>DEMO PAGE</h3>
+
+        <div class="links push">
+          <a href="/">HOME</a>
+          <a href="information">INFORMATION</a>
+          <a href="commands">COMMANDS</a>
+          <a href="download">DOWNLOAD</a>
+          <a href="suggest">SUGGEST</a>
+          <a href="more">MORE</a>
+          <a href="demo">DEMO</a>
+        </div>
+  
+      </div>
+
+    </div>
+
+    <script>
+      const menuBtn = document.querySelector('.menuBtn');
+      let menuOpen = false;
+      const links = document.querySelector('.links');
+      menuBtn.addEventListener('click', () => {
+        if(!menuOpen) {
+          menuBtn.classList.add('open');
+          links.classList.add('open');
+          menuOpen = true;
+
+        } else {
+          menuBtn.classList.remove('open');
+          links.classList.remove('open');
+          menuOpen = false;
+        }
+      });
+    </script>
+
+    <div class="desktop">
+      <div class="row">
+
+        <div class="columnOne">
+          <div class="desktopNav">
+            <h3 class="navTitle">NAVIGATION</h3>
+            <div>            
+              <a class="home" href="/"><li>HOME</li></a>
+              <a class="information" href="/information"><li>INFORMATION</li></a>
+              <a class="commands" href="/commands"><li>COMMANDS</li></a>
+              <a class="download" href="/download"><li class="glitchEffect">DOWNLOAD</li></a>
+              <a class="suggest" href="/suggest"><li>SUGGEST</li></a>
+              <a class="demo" href="/demo"><li>DEMO</li></a></div>
+          </div>
+        </div>
+
+        <div class="columnTwo"> 
+          <div class="glitchLogo"><a class="logo" href="/"><h1>ANONYMOUS BOT</h1></a></div>
+          <h3>DEMO PAGE</h3>
+        </div>
+  
+        <div class="columnThree">
+          <video controls>
+            <source controls autoplay src="movie.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footerContent">
+        <h3>Anonymous Bot</h3>
+        <p>
+          If you want to learn more about us, visit our information page above.
+        </p>
+      
+      <div class="footerBottom">
+        <p>
+          copyright &copy;2023 Anonymous Bot. designed by 
+          <span>Grayson Hoff, Riley Weld, Brent Stickney, and Liefe Sutliff</span>
+        </p>
+      </div>
+
+    </footer>
+  </body>

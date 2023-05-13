@@ -39,8 +39,9 @@ express()
     res.render('pages/suggest', {css: css})
   })
 
-  .get("/more", async(req, res) => {
-    res.render('pages/more')
+  .get("/demo", async(req, res) => {
+    var css = "/css/css.css";
+    res.render('pages/demo', {css: css})
   })
 
   .listen(PORT, () => console.log(`Listening on ${PORT}`));
