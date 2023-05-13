@@ -605,6 +605,35 @@ THIS IS THE DOWNLOAD PAGE SECTION
 	text-decoration: none;
 }
 
+/* 
+THIS IS THE DEMO PAGE SECTION
+THIS IS THE DEMO PAGE SECTION
+THIS IS THE DEMO PAGE SECTION
+THIS IS THE DEMO PAGE SECTION
+THIS IS THE DEMO PAGE SECTION
+THIS IS THE DEMO PAGE SECTION
+THIS IS THE DEMO PAGE SECTION
+THIS IS THE DEMO PAGE SECTION
+*/
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 25px;
+	height: 0px;
+}
+
+.videoWrapper iframe {
+	position: absolute;
+	left: 0px;
+	top: 3rem;
+	right: 0px;
+	bottom: 0px;
+	height: 100%;
+	width: 100%;
+}
+
+
 @media only screen and (min-width: 300px) and (max-width: 550px) {
 
 	.desktop {
