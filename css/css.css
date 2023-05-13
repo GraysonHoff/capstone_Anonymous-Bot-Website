@@ -784,6 +784,25 @@ THIS IS THE DEMO PAGE SECTION
 		color: #000;
 		text-decoration: none;
 	}
+
+		/* demo page */
+
+	.videoWrapper {
+		position: relative;
+		padding-bottom: 56.25%;
+		padding-top: 19rem;
+		height: 0px;
+	}
+	
+	.videoWrapper iframe {
+		position: absolute;
+		left: 0px;
+		top: 3rem;
+		right: 0px;
+		bottom: 0px;
+		height: 100%;
+		width: 100%;
+	}
 	
 }
 
@@ -942,6 +961,10 @@ THIS IS THE DEMO PAGE SECTION
 		text-decoration: none;
 	}
 
+	/* demo page */
+
+
+
 }
 
 @media only screen and (min-width: 1081px) and (max-width: 1440px) {
@@ -1012,6 +1035,10 @@ THIS IS THE DEMO PAGE SECTION
 		text-decoration: none;
 	}
 
+		/* demo page */
+
+
+
 }
 
 @media only screen and (min-width: 1441px) and (max-width: 2000px) {
@@ -1068,6 +1095,10 @@ THIS IS THE DEMO PAGE SECTION
 		color: #000;
 		text-decoration: none;
 	}
+
+		/* demo page */
+
+
 
 }
 
@@ -1126,6 +1157,10 @@ THIS IS THE DEMO PAGE SECTION
 		color: #000;
 		text-decoration: none;
 	}
+
+		/* demo page */
+
+
 
 }
 
@@ -1221,6 +1256,9 @@ THIS IS THE DEMO PAGE SECTION
 		color: #000;
 		text-decoration: none;
 	}
+
+		/* demo page */
+
 
 }
 
