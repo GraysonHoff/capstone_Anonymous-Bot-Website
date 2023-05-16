@@ -3,6 +3,11 @@ body {
 	background-color: #ddd;
 }
 
+@font-face {
+	font-family: Hacked;
+	src: url(https://hackedfont.com/HACKED.ttf);
+}
+
 .row {
 	margin-top: 7rem;
 }
@@ -174,7 +179,8 @@ body {
 
 /* GLITCH LOGO */
 .glitchLogo {
-	animation: glitch 3s linear infinite;
+	font-family: Hacked;
+	font-size: 25px;
 }
 
 @keyframes glitch {
