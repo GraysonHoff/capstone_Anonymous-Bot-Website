@@ -30,7 +30,6 @@
           <a href="commands">COMMANDS</a>
           <a href="download">DOWNLOAD</a>
           <a href="suggest">SUGGEST</a>
-          <a href="more">MORE</a>
           <a href="demo">DEMO</a>
         </div>
         
@@ -69,13 +68,19 @@
       });
     </script>
 
+    
+
     <div class="desktop">
       <div class="row">
 
+        
+
         <div class="columnOne">
+          
           <div class="desktopNav">
+            <img src="/images/moon.png" id="icon">
             <h3 class="navTitle">NAVIGATION</h3>
-            <div>            
+            <div>
               <a class="home" href="/"><li>HOME</li></a>
               <a class="information" href="/information"><li>INFORMATION</li></a>
               <a class="commands" href="/commands"><li>COMMANDS</li></a>
@@ -86,14 +91,16 @@
           </div>
         </div>
 
+
         <div class="columnTwo"> 
           <div class="glitchLogo"><a class="logo" href="/"><h1>ANONYMOUS BOT</h1></a></div>
-          <!-- <a class="logo" href="/"><h1>ANONYMOUS BOT</h1></a> -->
           <h3>HOME PAGE</h3>
           <span class="desktopImage"><img id="maskImage" src="<%= pic %>" alt="maskImage"></span>
         </div>
-  
+
+
         <div class="columnThree">
+
           <div class="paragraph">
             <p>
               Hello and welcome to our page! If you have found yourself here, you must be
@@ -120,6 +127,37 @@
           <span>Grayson Hoff, Riley Weld, Brent Stickney, and Liefe Sutliff</span>
         </p>
       </div>
+
+      <script>
+
+        var icon = document.getElementById("icon");
+
+        if (localStorage.getItem("theme") == null) {
+          localStorage.setItem("theme", "light");
+        }
+
+        let localData = localStorage.getItem("theme");
+
+        if (localData == "light") {
+          icon.src = "images/moon.png";
+          document.body.classList.remove("darkTheme");
+        } else if (localData == "dark") {
+          icon.src = "images/sun.png";
+          document.body.classList.add("darkTheme");
+        }
+
+        icon.onclick = function() {
+          document.body.classList.toggle("darkTheme");
+          if (document.body.classList.contains("darkTheme")) {
+            icon.src = "images/sun.png";
+            localStorage.setItem("theme", "dark");
+          } else {
+            icon.src = "images/moon.png";
+            localStorage.setItem("theme", "light");
+          }
+        }
+
+      </script>
 
     </footer>
   </body>

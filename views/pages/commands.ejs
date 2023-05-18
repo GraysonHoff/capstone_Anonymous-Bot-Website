@@ -75,6 +75,7 @@
 
           <div class="columnOne">
             <div class="desktopNav">
+              <img src="/images/moon.png" id="icon">
               <h3 class="navTitle">NAVIGATION</h3>
               <a class="home" href="/"><li>HOME</li></a>
               <a class="information" href="/information"><li>INFORMATION</li></a>
@@ -125,6 +126,37 @@
         </div>
 
       </footer>
+
+      <script>
+
+        var icon = document.getElementById("icon");
+
+        if (localStorage.getItem("theme") == null) {
+          localStorage.setItem("theme", "light");
+        }
+
+        let localData = localStorage.getItem("theme");
+
+        if (localData == "light") {
+          icon.src = "images/moon.png";
+          document.body.classList.remove("darkTheme");
+        } else if (localData == "dark") {
+          icon.src = "images/sun.png";
+          document.body.classList.add("darkTheme");
+        }
+
+        icon.onclick = function() {
+          document.body.classList.toggle("darkTheme");
+          if (document.body.classList.contains("darkTheme")) {
+            icon.src = "images/sun.png";
+            localStorage.setItem("theme", "dark");
+          } else {
+            icon.src = "images/moon.png";
+            localStorage.setItem("theme", "light");
+          }
+        }
+
+      </script>
 
   </body>
 </html>
